@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>About | Abhishek Umrawal</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&amp;family=Source+Sans+3:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+:root{
+  --bg:#f7f6f2; --paper:#fff; --ink:#192838; --text:#263645; --muted:#6a7682;
+  --blue:#315a7d; --blue-soft:#e9eff4; --gold:#bd9555; --gold-soft:#f3eadb;
+  --line:#dce2e6; --tint:#eef2f4;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --sans:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1.02rem/1.62 var(--serif)}
+a{color:var(--blue);text-underline-offset:3px} a:hover{color:#1f425f}
+a:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:3px}
+.top{position:sticky;top:0;z-index:20;background:rgba(247,246,242,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+.topin{max-width:68rem;margin:auto;padding:.56rem 1.25rem;display:flex;align-items:center;gap:1.25rem}
+.brand{font:600 .91rem var(--sans);letter-spacing:.11em;color:var(--ink);text-decoration:none;white-space:nowrap}
+nav{flex:1;display:flex;justify-content:center;gap:.1rem} nav a{padding:.48rem .72rem;color:var(--muted);font:500 .96rem var(--sans);text-decoration:none}
+nav a:hover{color:var(--ink)} nav a[aria-current="page"]{color:var(--blue);box-shadow:inset 0 -2px 0 var(--gold)}
+.cvbtn{border:1.5px solid var(--blue);border-radius:999px;padding:.37rem .82rem;text-decoration:none;font:600 .89rem var(--sans);white-space:nowrap}
+.page{max-width:68rem;margin:auto;padding:0 1.25rem 2rem}
+.homegrid{display:grid;grid-template-columns:14.5rem 1fr;gap:3rem;padding-top:2.6rem}.side{position:sticky;top:4.2rem;align-self:start;font-size:.95rem}
+.photo{aspect-ratio:3/4;background:var(--tint);border-radius:8px;overflow:hidden;position:relative;margin-bottom:1.05rem;border:1px solid var(--line)}
+.photo img{width:100%;height:100%;display:block;object-fit:cover}.photo span{position:absolute;inset:0;display:none;align-items:center;justify-content:center;font:600 2.8rem var(--serif);color:var(--muted)}.photo.nophoto span{display:flex}
+.sh{margin:1.15rem 0 .28rem;font:600 .76rem var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.side p{margin:.2rem 0}.chips{display:flex;flex-wrap:wrap;gap:.3rem}.chip{padding:.08rem .52rem;border-radius:999px;background:var(--blue-soft);color:var(--ink);font:500 .8rem var(--sans)}
+.eyebrow{margin:.15rem 0 .25rem;color:var(--blue);font:600 .82rem var(--sans);letter-spacing:.09em;text-transform:uppercase}
+h1{margin:0 0 .45rem;color:var(--ink);font:600 clamp(2.15rem,4vw,2.9rem)/1.08 var(--serif);letter-spacing:-.015em}
+.position{margin:0 0 1.25rem;color:var(--muted)}.position b{color:var(--text)}
+.lede{max-width:47rem;margin:.4rem 0 1.5rem;font:400 1.2rem/1.52 var(--serif);color:var(--text)}
+.quick{display:flex;flex-wrap:wrap;gap:.45rem;margin:0 0 2rem}.quick a{padding:.28rem .7rem;border:1px solid var(--line);background:var(--paper);border-radius:999px;text-decoration:none;font:600 .84rem var(--sans)}
+h2{margin:2.45rem 0 .65rem;color:var(--ink);font:600 1.72rem/1.2 var(--serif)} h2:after{content:"";display:block;width:2.55rem;height:3px;margin-top:.45rem;background:var(--gold)}
+h3{margin:1.8rem 0 .45rem;color:var(--ink);font:600 1.28rem/1.3 var(--serif)}p{margin:.55rem 0}
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}.pillar{background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:7px;padding:1.1rem 1.2rem}.pillar:nth-child(2){border-top-color:var(--blue)}
+.num{font:600 .75rem var(--sans);color:var(--muted);letter-spacing:.09em;text-transform:uppercase}.pillar h3{margin:.25rem 0}.pillar .claim{color:var(--blue);font-weight:600}.pipeline{margin-top:.7rem;color:var(--muted);font-size:.92rem}.pipeline b{color:var(--text)}
+.metrics{display:grid;grid-template-columns:repeat(5,1fr);margin:1.8rem 0;border:1px solid var(--line);background:var(--paper);border-radius:7px;overflow:hidden}.metric{padding:.8rem 1rem;border-right:1px solid var(--line);font:500 .8rem var(--sans);color:var(--muted)}.metric:last-child{border-right:0}.metric b{display:block;color:var(--ink);font:600 1.45rem var(--serif)}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}.card{background:var(--paper);border:1px solid var(--line);border-radius:7px;padding:1.05rem 1.1rem}.status{font:600 .76rem var(--sans);letter-spacing:.03em;color:var(--blue);text-transform:uppercase}.card h3{font-size:1.12rem;margin:.3rem 0}.authors{font-size:.9rem;color:var(--muted)}.summary{font-size:.96rem}.links{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.65rem}.links a{display:inline-block;padding:.24rem .72rem;border:1.5px solid var(--blue);border-radius:999px;background:transparent;color:var(--blue);text-decoration:none;font:600 .81rem var(--sans);line-height:1.35;transition:background-color .16s ease,color .16s ease,border-color .16s ease,transform .16s ease}.links a:hover{background:var(--blue);border-color:var(--blue);color:#fff;transform:translateY(-1px)}.links a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.news{list-style:none;padding:0;margin:0}.news li{display:grid;grid-template-columns:5.7rem 5.2rem 1fr;gap:.7rem;padding:.68rem 0;border-bottom:1px solid var(--line)}.date,.tag{font-family:var(--sans);font-size:.82rem}.date{color:var(--muted)}.tag{color:var(--blue);font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.news-text{line-height:1.48}
+.news-button{display:inline-block;margin-left:.4rem;padding:.12rem .48rem;border:1px solid var(--blue);border-radius:999px;color:var(--blue);text-decoration:none;font:600 .72rem var(--sans);line-height:1.3;white-space:nowrap}
+.news-button:hover{background:var(--blue);color:#fff}
+.pagehead{padding:2.2rem 0 1rem;border-bottom:1px solid var(--line);margin-bottom:1.4rem}.pagehead h1{font-size:2.4rem}.pagehead p{color:var(--muted);max-width:44rem}
+.researchblock{max-width:51rem}.researchblock .question{font-size:1.14rem;color:var(--blue);font-weight:600}.methods{padding:.8rem 1rem;margin:1.2rem 0;background:var(--blue-soft);border-left:4px solid var(--blue)}
+.pubgroup{margin:1.9rem 0}.pubgroup>h2{font-size:1.55rem}.pub{display:grid;grid-template-columns:3.15rem 1fr;gap:.5rem;padding:.8rem 0;border-bottom:1px solid var(--line)}.pn{font:700 .9rem var(--sans);color:var(--blue)}.pt{font-weight:600;color:var(--ink)}.pv{font-style:italic}.sub{font-size:.93rem;color:var(--muted);margin-top:.25rem}.pub .links{margin-top:.35rem}
+ul.clean{padding-left:1.1rem}li{margin:.28rem 0}.row{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}.row>span:last-child{white-space:nowrap;color:var(--muted)}
+.material{display:inline-block;margin:.6rem .5rem .2rem 0;padding:.38rem .8rem;border:1px solid var(--blue);border-radius:999px;text-decoration:none;font:600 .86rem var(--sans)}
+footer{margin-top:3rem;padding:1.35rem 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}footer .f{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.edu-list,.appt-list{margin-top:.5rem}.edu-item,.appt-item{padding:.9rem 0;border-bottom:1px solid var(--line)}.edu-item h3,.appt-item h3{margin:.12rem 0;font-size:1.08rem}.edu-item p,.appt-item p{margin:.16rem 0}.when{font:600 .76rem var(--sans);color:var(--blue);letter-spacing:.05em;text-transform:uppercase}.edu-item:last-child,.appt-item:last-child{border-bottom:0}.edu-item .sub,.appt-item .sub{margin-top:.25rem}
+@media(max-width:820px){.homegrid{grid-template-columns:1fr;gap:1.3rem}.side{position:static}.photo{max-width:11rem}.pillars,.cards,.metrics{grid-template-columns:1fr}.metric{border-right:0;border-bottom:1px solid var(--line)}.metric:last-child{border-bottom:0}.topin{flex-wrap:wrap}nav{order:3;flex-basis:100%;justify-content:flex-start;overflow-x:auto}.news li{grid-template-columns:1fr;gap:.05rem}.pub{grid-template-columns:2.6rem 1fr}}
+@media print{.top{display:none}.js .panel{display:block!important}.side{position:static}}
+.timeline{position:relative;margin:1.1rem 0 .4rem .5rem;padding-left:1.55rem}.timeline::before{content:"";position:absolute;left:4px;top:.35rem;bottom:.45rem;width:2px;background:#bd9555}.timeline .edu{position:relative;margin:0;padding:0 0 1.3rem .2rem}.timeline .edu:last-child{padding-bottom:.15rem}.timeline .edu::before{content:"";position:absolute;left:-1.55rem;top:.31rem;width:10px;height:10px;border-radius:50%;background:#f7f6f2;border:2px solid #bd9555}.timeline .year{font:600 .78rem var(--sans);color:var(--blue);text-transform:uppercase;letter-spacing:.04em;margin-bottom:.05rem}
+/* Quarto integration */
+#quarto-content { max-width: 68rem; margin: 0 auto; }
+.navbar { background: rgba(247,246,242,.96); border-bottom:1px solid var(--line); font-family:var(--sans); }
+.navbar-brand { font-weight:600; letter-spacing:.08em; color:var(--ink); }
+.navbar-nav .nav-link { color:var(--muted); font-weight:500; }
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:hover { color:var(--blue); }
+.navbar .cv-link { border:1.5px solid var(--blue); border-radius:999px; padding:.3rem .75rem!important; }
+main.content { padding-top: 1.4rem; }
+.quarto-title-block { display:none; }
+section.panel { display:block!important; }
+/* Research-area publication buttons */
+.research-output-groups{margin-top:.85rem;padding-top:.7rem;border-top:1px solid var(--line)}
+.research-output-row{display:flex;align-items:flex-start;gap:.55rem;margin:.42rem 0}
+.research-output-label{min-width:4.3rem;padding-top:.22rem;font:600 .72rem var(--sans);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.research-output-links{display:flex;flex-wrap:wrap;gap:.32rem}
+.research-output-links a{display:inline-block;padding:.19rem .55rem;border:1px solid var(--blue);border-radius:999px;background:#fff;color:var(--blue);text-decoration:none;font:600 .74rem var(--sans);line-height:1.3;transition:background-color .16s ease,color .16s ease,transform .16s ease}
+.research-output-links a:hover{background:var(--blue);color:#fff;transform:translateY(-1px)}
+@media(max-width:520px){.research-output-row{display:block}.research-output-label{display:block;margin-bottom:.3rem}.research-output-links{display:flex}}
+/* Distinguish research-area and method chips */
+.side .chips:not(.method-chips) .chip:nth-child(1){background:#e5eef6;color:#244f73}
+.side .chips:not(.method-chips) .chip:nth-child(2){background:#f3eadb;color:#76572b}
+.side .chips:not(.method-chips) .chip:nth-child(3){background:#e8f1eb;color:#356347}
+.side .chips:not(.method-chips) .chip:nth-child(4){background:#eee8f4;color:#624c78}
+.method-chips .chip{background:#fff;border:1px solid var(--line);color:#445463;font-weight:500}
+.method-chips .chip:nth-child(1),.method-chips .chip:nth-child(2){border-color:#b8ccdc;background:#f3f7fa;color:#315a7d}
+.method-chips .chip:nth-child(3),.method-chips .chip:nth-child(5){border-color:#decba9;background:#fbf7ef;color:#76572b}
+.method-chips .chip:nth-child(4),.method-chips .chip:nth-child(6){border-color:#c8d7cd;background:#f3f8f5;color:#3f674e}
+/* Active navigation + night mode */
+.navbar .nav-link.active,.compiled-nav a.active{color:var(--blue)!important;box-shadow:inset 0 -2px 0 var(--gold);font-weight:600}.theme-toggle{width:2.15rem;height:2.15rem;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--ink);font:600 1rem/1 var(--sans);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;margin-left:.2rem}.theme-toggle:hover{border-color:var(--blue);color:var(--blue)}.theme-toggle:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+html[data-theme="dark"]{--bg:#111820;--paper:#18232d;--ink:#eef3f7;--text:#d7e0e7;--muted:#a5b2be;--blue:#8db9dc;--blue-soft:#213647;--gold:#d6ae6b;--gold-soft:#433822;--line:#34434f;--tint:#202d37;color-scheme:dark}html[data-theme="dark"] body{background:var(--bg);color:var(--text)}html[data-theme="dark"] .navbar,html[data-theme="dark"] .compiled-nav{background:rgba(17,24,32,.97)}html[data-theme="dark"] .research-output-links a,html[data-theme="dark"] .method-chips .chip{background:var(--paper)}
+/* Profile buttons */
+.profile-buttons{display:flex;flex-direction:column;gap:.38rem;margin:.24rem 0 .55rem}.profile-buttons a{display:flex;align-items:center;gap:.48rem;width:100%;padding:.3rem .55rem;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--ink);text-decoration:none;font:600 .79rem var(--sans);transition:border-color .15s ease,transform .15s ease,background-color .15s ease}.profile-buttons a:hover{border-color:var(--blue);background:var(--blue-soft);transform:translateY(-1px)}.profile-icon{width:1.3rem;height:1.3rem;flex:0 0 1.3rem;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font:700 .68rem var(--sans);color:#fff}.profile-icon.scholar{background:#4285f4}.profile-icon.linkedin{background:#0a66c2;font-size:.67rem}.profile-icon.illinois{background:#13294b;color:#ff5f05;border-radius:4px;font-family:Georgia,serif;font-size:.82rem}html[data-theme="dark"] .profile-buttons a{background:var(--paper);border-color:var(--line)}
+.compiled-nav{position:sticky;top:0;z-index:30;background:rgba(247,246,242,.97);border-bottom:1px solid var(--line);font-family:var(--sans)}.compiled-nav .inner{max-width:68rem;margin:auto;padding:.56rem 1.25rem;display:flex;align-items:center;gap:1.15rem;overflow-x:auto}.compiled-nav .brand{margin-right:auto}.compiled-nav a{text-decoration:none;white-space:nowrap}.compiled-page{max-width:68rem;margin:auto;padding:0 1.25rem 2rem}@media(max-width:820px){.compiled-nav .inner{gap:.75rem}}
+  </style>
+</head>
+<body>
+  <div class="compiled-nav">
+    <div class="inner">
+      <a class="brand" href="index.html">ABHISHEK UMRAWAL</a>
+      <a aria-current="page" class="active" href="index.html">About</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="service.html">Service</a>
+      <a href="talks.html">Talks</a>
+      <a href="grants.html">Grants</a>
+      <a href="awards.html">Awards</a>
+      <button aria-label="Use dark mode" class="theme-toggle" id="theme-toggle" title="Use dark mode" type="button">☾</button>
+      <a class="cvbtn" href="cv.pdf">CV ↓</a>
+    </div>
+  </div>
+
+  <div class="compiled-page">
+    <div class="homegrid">
+      <aside class="side">
+        <div class="photo">
+          <img alt="Portrait photograph" onerror="this.parentNode.classList.add('nophoto');this.remove()" src="photo.jpg"/>
+          <span>AU</span>
+        </div>
+        <div class="sh">Contact</div>
+        <p>
+          <a href="mailto:aumrawal@illinois.edu">aumrawal@illinois.edu</a><br/>
+          3054 ECE Building<br/>
+          306 N. Wright St.<br/>
+          Urbana, IL 61801
+        </p>
+        <div class="sh">Profiles</div>
+        <div class="profile-buttons">
+          <a href="https://scholar.google.co.in/citations?user=ezM7mtQAAAAJ&amp;hl=en" rel="noopener" target="_blank"><span class="profile-icon scholar">G</span><span>Google Scholar</span></a>
+          <a href="https://www.linkedin.com/in/abhishekumrawal/" rel="noopener" target="_blank"><span class="profile-icon linkedin">in</span><span>LinkedIn</span></a>
+          <a href="https://ece.illinois.edu/about/directory/faculty/aumrawal" rel="noopener" target="_blank"><span class="profile-icon illinois">I</span><span>Official Page</span></a>
+        </div>
+        <div class="sh">Research areas</div>
+        <p class="chips">
+          <span class="chip">Algorithmic Marketing</span>
+          <span class="chip">Influence &amp; Incentives</span>
+          <span class="chip">Targeting &amp; Allocation</span>
+          <span class="chip">Generative AI Safety</span>
+        </p>
+        <div class="sh">Methods</div>
+        <p class="chips method-chips">
+          <span class="chip">Mathematical Optimization</span>
+          <span class="chip">Machine Learning</span>
+          <span class="chip">Bandits &amp; Online Learning</span>
+          <span class="chip">Network Science</span>
+        </p>
+      </aside>
+
+      <div>
+        <p class="eyebrow">Algorithmic decision-making for digital platforms and AI systems</p>
+        <h1>Abhishek Umrawal</h1>
+        <p class="position"><b>Teaching Assistant Professor</b><br/><!-- Electrical &amp; Computer Engineering, --> University of Illinois Urbana-Champaign</p>
+        <p class="lede">My research develops AI-driven, optimization-grounded methods for computational marketing, online decision-making, and platform optimization. I combine machine learning, operations research, and economics to study resource allocation, targeting, incentives, and strategic behavior in digital platforms and AI systems.</p>
+        <!-- <div class="quick"><a href="#research">Research overview</a><a href="#publications">Publications</a><a href="cv.pdf">CV</a><a href="https://scholar.google.co.in/citations?user=ezM7mtQAAAAJ&hl=en">Google Scholar</a></div> -->
+
+        <!--
+        <h2>Research Program</h2>
+        <div class="pillars">
+          <article class="pillar">
+            <h3>Computational Marketing &amp; Digital Platforms</h3>
+            <p class="claim">Optimize targeting, incentives, and resource allocation in networked markets.</p>
+            <p>I study influence maximization, fractional and heterogeneous incentives, social reinforcement, attention mechanisms, and online learning for targeting and recommendation.</p>
+            <div class="research-output-groups">
+              <div class="research-output-row"><span class="research-output-label">Journal pipeline</span><span class="research-output-links"><a href="publications.html#jr5">Management Science · BGFIM</a><a href="publications.html#jr4">Management Science · Word-of-Mouth</a><a href="publications.html#jr3">Information Systems Research · Attention</a><a href="publications.html#jr2">Operations Research · Online Learning</a></span></div>
+              <div class="research-output-row"><span class="research-output-label">Journals</span><span class="research-output-links"><a href="publications.html#j4">Journal of Artificial Intelligence Research</a><a href="publications.html#j3">IEEE Transactions on Emerging Topics in Computational Intelligence</a><a href="publications.html#j2">ACM/IMS Transactions on Data Science</a></span></div>
+              <div class="research-output-row"><span class="research-output-label">Conferences</span><span class="research-output-links"><a href="publications.html#jr4">International AAAI Conference on Web and Social Media</a><a href="publications.html#jr5">ACM CIKM</a><a href="publications.html#j3">ACM SIGMETRICS</a><a href="publications.html#j2">Algorithmic Learning Theory</a><a href="publications.html#j4">IEEE CDC</a><a href="publications.html#c5">VLDB</a><a href="publications.html#c3">UAI</a><a href="publications.html#c2">AAAI</a></span></div>
+              <div class="research-output-row"><span class="research-output-label">Software</span><span class="research-output-links"><a href="publications.html#s1">CyNetDiff · PyPI</a></span></div>
+            </div>
+          </article>
+          <article class="pillar">
+            <h3>Generative AI Safety, Causality &amp; Strategic Behavior</h3>
+            <p class="claim">Understand and control strategic behavior in modern AI systems.</p>
+            <p>I study attacker–defender interactions and intent-hiding in large language models, together with causal interventions for controllability, interpretability, and platform integrity.</p>
+            <div class="research-output-groups">
+              <div class="research-output-row"><span class="research-output-label">Journal pipeline</span><span class="research-output-links"><a href="publications.html#jr1">INFORMS Journal on Computing · LLM Safety</a></span></div>
+              <div class="research-output-row"><span class="research-output-label">Conferences</span><span class="research-output-links"><a href="publications.html#jr1">International Conference on Machine Learning</a></span></div>
+              <div class="research-output-row"><span class="research-output-label">Working papers</span><span class="research-output-links"><a href="publications.html#w2">Causal Steering of LLMs</a><a href="publications.html#w1">Causal Analysis of Mixture-of-Experts</a></span></div>
+            </div>
+          </article>
+        </div>
+        -->
+        <div class="metrics">
+          <div class="metric"><b>376</b>Citations</div>
+          <div class="metric"><b>10</b>h-index</div>
+          <div class="metric"><b>4</b>Journal papers</div>
+          <div class="metric"><b>5</b>Journal manuscripts</div>
+          <div class="metric"><b>11</b>Conference papers</div>
+        </div>
+        
+        <h2>Education &amp; Training</h2>
+        <div class="timeline">
+          <div class="edu">
+            <div class="year">2023</div>
+            <b>Ph.D., Industrial Engineering (Operations Research)</b><br/>
+            Purdue University, College of Engineering<br/>
+            <span class="sub">Dissertation: Machine Learning Algorithms for Influence Maximization on Social Networks<br/>Advisors: Vaneet Aggarwal and Christopher Quinn</span>
+          </div>
+          <div class="edu"><div class="year">2021</div><b>M.S., Economics</b><br/>Purdue University, Mitch E. Daniels, Jr. School of Business</div>
+          <div class="edu"><div class="year">2011</div><b>M.S., Statistics</b><br/>Indian Institute of Technology (IIT) Kanpur</div>
+        </div>
+
+        <h2>Academic Appointments</h2>
+        <div class="timeline">
+          <div class="edu">
+            <div class="year">2023 - Present</div>
+            <b>Teaching Assistant Professor</b><br/>
+            Department of Electrical and Computer Engineering<br/>
+            University of Illinois Urbana-Champaign<br/>
+            <span class="sub">Affiliations: Coordinated Science Lab, National Center for Supercomputing Applications, Grad College</span>
+          </div>
+          <div class="edu"><div class="year">2022 - 2023</div><b>Visiting Lecturer</b><br/>Department of Computer Science and Electrical Engineering<br/>University of Maryland, Baltimore County</div>
+        </div>
+        <!-- <div class="timeline"><div class="edu"><div class="year">2011 - 2012</div><b>Marketing Analyst</b><br>Accenture Management Consulting, Gurugram, India<br><span class="sub">Promotional analytics, pricing strategy evaluation, and sales forecasting for retail, finance, and telecommunications clients.</span></div></div> -->
+
+        <h2>Recent News</h2>
+        <ul class="news">
+          <li>
+            <span class="date">Nov. 2026</span>
+            <span class="tag">Upcoming</span>
+            <span class="news-text">Presenting <i>Optimizing Marketing Budgets for Social Influence</i> at the INFORMS Annual Meeting 2026 and chairing a conference session. <a class="news-button" href="talks.html">Talk</a></span>
+          </li>
+          <li>
+            <span class="date">Sept. 2026</span>
+            <span class="tag">Workshop</span>
+            <span class="news-text"><i>Adaptive Exploration and Exploitation for Sequential Decision-Making under Uncertain and Weakly Separated Rewards</i> accepted to the NeurIPS 2026 ML×OR Workshop. <a class="news-button" href="https://mlxor-2026.github.io/" target="_blank" rel="noopener noreferrer">Workshop</a></span>
+          </li>
+          <li>
+            <span class="date">Aug. 2026</span>
+            <span class="tag">Media</span>
+            <span class="news-text">Game-theoretic research on attacks and defenses for large language models featured by Illinois ECE. <a class="news-button" href="https://ece.illinois.edu/news/player-one-winner-ece-doctoral-students-theoretical-game-of-ai-attacks-places-at-llm-conference" target="_blank" rel="noopener noreferrer">Story</a></span>
+          </li>
+          <li>
+            <span class="date">July 2026</span>
+            <span class="tag">Conference</span>
+            <span class="news-text"><i>A Theoretical Game of LLM Attacks via Compositional Skills</i> accepted to the International Conference on Machine Learning 2026. <a class="news-button" href="https://icml.cc/virtual/2026/poster/61257" target="_blank" rel="noopener noreferrer">Paper</a></span>
+          </li>
+          <li>
+            <span class="date">June 2026</span>
+            <span class="tag">Journal</span>
+            <span class="news-text"><i>Maximizing the Spread of Influence through a Social Network Using Partial Incentives</i> published in the <i>Journal of Artificial Intelligence Research</i>. <a class="news-button" href="https://jair.org/index.php/jair/article/view/20410" target="_blank" rel="noopener noreferrer">Paper</a></span>
+          </li>
+          <li>
+            <span class="date">May 2026</span>
+            <span class="tag">Award</span>
+            <span class="news-text">Received the Gold Reviewer Award from the International Conference on Machine Learning 2026. <a class="news-button" href="awards.html">Award</a></span>
+          </li>
+          <li>
+            <span class="date">May 2026</span>
+            <span class="tag">Conference</span>
+            <span class="news-text"><i>A Pressure-Based Diffusion Model for Influence Maximization on Social Networks</i> accepted to the International AAAI Conference on Web and Social Media 2026. <a class="news-button" href="https://ojs.aaai.org/index.php/ICWSM/article/view/42747" target="_blank" rel="noopener noreferrer">Paper</a></span>
+          </li>
+          <li>
+            <span class="date">April 2026</span>
+            <span class="tag">Awards</span>
+            <span class="news-text">Received the Stanley H. Pierce Award and Engineering Council Outstanding Advisor Award at Illinois. <a class="news-button" href="https://ece.illinois.edu/news/ece-faculty-recognized-for-advising-mentorship-and-leadership-development" target="_blank" rel="noopener noreferrer">Story</a></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+(function(){
+  var storageKey='au-theme';
+  function getSaved(){ try{return localStorage.getItem(storageKey)}catch(e){return null} }
+  function save(v){ try{localStorage.setItem(storageKey,v)}catch(e){} }
+  function preferred(){ return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+  function setTheme(theme){
+    document.documentElement.setAttribute('data-theme',theme);
+    save(theme);
+    document.querySelectorAll('.theme-toggle').forEach(function(btn){
+      btn.textContent=theme==='dark'?'☀':'☾';
+      var label=theme==='dark'?'Use light mode':'Use dark mode';
+      btn.setAttribute('aria-label',label); btn.setAttribute('title',label);
+    });
+  }
+  var initial=getSaved()||preferred();
+  document.documentElement.setAttribute('data-theme',initial);
+  function init(){
+    document.querySelectorAll('.theme-toggle').forEach(function(btn){
+      if(btn.dataset.bound!=='1'){
+        btn.dataset.bound='1';
+        btn.addEventListener('click',function(){ setTheme(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark'); });
+      }
+    });
+    setTheme(document.documentElement.getAttribute('data-theme')||initial);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
+    </script>
+
+    <footer>
+      <div class="f">
+        <span>© 2026 Abhishek Umrawal</span>
+        <span>
+          <a href="https://scholar.google.co.in/citations?user=ezM7mtQAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          ·
+          <a href="https://www.linkedin.com/in/abhishekumrawal/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          ·
+          <a href="https://ece.illinois.edu/about/directory/faculty/aumrawal" target="_blank" rel="noopener noreferrer">Official Page</a>
+        </span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

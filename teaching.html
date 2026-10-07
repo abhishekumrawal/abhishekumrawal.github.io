@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Teaching | Abhishek Umrawal
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&amp;family=Source+Sans+3:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+   :root{
+  --bg:#f7f6f2; --paper:#fff; --ink:#192838; --text:#263645; --muted:#6a7682;
+  --blue:#315a7d; --blue-soft:#e9eff4; --gold:#bd9555; --gold-soft:#f3eadb;
+  --line:#dce2e6; --tint:#eef2f4;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --sans:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1.02rem/1.62 var(--serif)}
+a{color:var(--blue);text-underline-offset:3px} a:hover{color:#1f425f}
+a:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:3px}
+.top{position:sticky;top:0;z-index:20;background:rgba(247,246,242,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+.topin{max-width:68rem;margin:auto;padding:.56rem 1.25rem;display:flex;align-items:center;gap:1.25rem}
+.brand{font:600 .91rem var(--sans);letter-spacing:.11em;color:var(--ink);text-decoration:none;white-space:nowrap}
+nav{flex:1;display:flex;justify-content:center;gap:.1rem} nav a{padding:.48rem .72rem;color:var(--muted);font:500 .96rem var(--sans);text-decoration:none}
+nav a:hover{color:var(--ink)} nav a[aria-current="page"]{color:var(--blue);box-shadow:inset 0 -2px 0 var(--gold)}
+.cvbtn{border:1.5px solid var(--blue);border-radius:999px;padding:.37rem .82rem;text-decoration:none;font:600 .89rem var(--sans);white-space:nowrap}
+.page{max-width:68rem;margin:auto;padding:0 1.25rem 2rem}
+.homegrid{display:grid;grid-template-columns:14.5rem 1fr;gap:3rem;padding-top:2.6rem}.side{position:sticky;top:4.2rem;align-self:start;font-size:.95rem}
+.photo{aspect-ratio:3/4;background:var(--tint);border-radius:8px;overflow:hidden;position:relative;margin-bottom:1.05rem;border:1px solid var(--line)}
+.photo img{width:100%;height:100%;display:block;object-fit:cover}.photo span{position:absolute;inset:0;display:none;align-items:center;justify-content:center;font:600 2.8rem var(--serif);color:var(--muted)}.photo.nophoto span{display:flex}
+.sh{margin:1.15rem 0 .28rem;font:600 .76rem var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.side p{margin:.2rem 0}.chips{display:flex;flex-wrap:wrap;gap:.3rem}.chip{padding:.08rem .52rem;border-radius:999px;background:var(--blue-soft);color:var(--ink);font:500 .8rem var(--sans)}
+.eyebrow{margin:.15rem 0 .25rem;color:var(--blue);font:600 .82rem var(--sans);letter-spacing:.09em;text-transform:uppercase}
+h1{margin:0 0 .45rem;color:var(--ink);font:600 clamp(2.15rem,4vw,2.9rem)/1.08 var(--serif);letter-spacing:-.015em}
+.position{margin:0 0 1.25rem;color:var(--muted)}.position b{color:var(--text)}
+.lede{max-width:47rem;margin:.4rem 0 1.5rem;font:400 1.2rem/1.52 var(--serif);color:var(--text)}
+.quick{display:flex;flex-wrap:wrap;gap:.45rem;margin:0 0 2rem}.quick a{padding:.28rem .7rem;border:1px solid var(--line);background:var(--paper);border-radius:999px;text-decoration:none;font:600 .84rem var(--sans)}
+h2{margin:2.45rem 0 .65rem;color:var(--ink);font:600 1.72rem/1.2 var(--serif)} h2:after{content:"";display:block;width:2.55rem;height:3px;margin-top:.45rem;background:var(--gold)}
+h3{margin:1.8rem 0 .45rem;color:var(--ink);font:600 1.28rem/1.3 var(--serif)}p{margin:.55rem 0}
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}.pillar{background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:7px;padding:1.1rem 1.2rem}.pillar:nth-child(2){border-top-color:var(--blue)}
+.num{font:600 .75rem var(--sans);color:var(--muted);letter-spacing:.09em;text-transform:uppercase}.pillar h3{margin:.25rem 0}.pillar .claim{color:var(--blue);font-weight:600}.pipeline{margin-top:.7rem;color:var(--muted);font-size:.92rem}.pipeline b{color:var(--text)}
+.metrics{display:grid;grid-template-columns:repeat(5,1fr);margin:1.8rem 0;border:1px solid var(--line);background:var(--paper);border-radius:7px;overflow:hidden}.metric{padding:.8rem 1rem;border-right:1px solid var(--line);font:500 .8rem var(--sans);color:var(--muted)}.metric:last-child{border-right:0}.metric b{display:block;color:var(--ink);font:600 1.45rem var(--serif)}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}.card{background:var(--paper);border:1px solid var(--line);border-radius:7px;padding:1.05rem 1.1rem}.status{font:600 .76rem var(--sans);letter-spacing:.03em;color:var(--blue);text-transform:uppercase}.card h3{font-size:1.12rem;margin:.3rem 0}.authors{font-size:.9rem;color:var(--muted)}.summary{font-size:.96rem}.links{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.65rem}.links a{display:inline-block;padding:.24rem .72rem;border:1.5px solid var(--blue);border-radius:999px;background:transparent;color:var(--blue);text-decoration:none;font:600 .81rem var(--sans);line-height:1.35;transition:background-color .16s ease,color .16s ease,border-color .16s ease,transform .16s ease}.links a:hover{background:var(--blue);border-color:var(--blue);color:#fff;transform:translateY(-1px)}.links a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.news{list-style:none;padding:0;margin:0}.news li{display:grid;grid-template-columns:5.7rem 5.2rem 1fr;gap:.7rem;padding:.68rem 0;border-bottom:1px solid var(--line)}.date,.tag{font-family:var(--sans);font-size:.82rem}.date{color:var(--muted)}.tag{color:var(--blue);font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.pagehead{padding:2.2rem 0 1rem;border-bottom:1px solid var(--line);margin-bottom:1.4rem}.pagehead h1{font-size:2.4rem}.pagehead p{color:var(--muted);max-width:44rem}
+.researchblock{max-width:51rem}.researchblock .question{font-size:1.14rem;color:var(--blue);font-weight:600}.methods{padding:.8rem 1rem;margin:1.2rem 0;background:var(--blue-soft);border-left:4px solid var(--blue)}
+.pubgroup{margin:1.9rem 0}.pubgroup>h2{font-size:1.55rem}.pub{display:grid;grid-template-columns:3.15rem 1fr;gap:.5rem;padding:.8rem 0;border-bottom:1px solid var(--line)}.pn{font:700 .9rem var(--sans);color:var(--blue)}.pt{font-weight:600;color:var(--ink)}.pv{font-style:italic}.sub{font-size:.93rem;color:var(--muted);margin-top:.25rem}.pub .links{margin-top:.35rem}
+ul.clean{padding-left:1.1rem}li{margin:.28rem 0}.row{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}.row>span:last-child{white-space:nowrap;color:var(--muted)}
+.material{display:inline-block;margin:.6rem .5rem .2rem 0;padding:.38rem .8rem;border:1px solid var(--blue);border-radius:999px;text-decoration:none;font:600 .86rem var(--sans)}
+footer{margin-top:3rem;padding:1.35rem 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}footer .f{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.edu-list,.appt-list{margin-top:.5rem}.edu-item,.appt-item{padding:.9rem 0;border-bottom:1px solid var(--line)}.edu-item h3,.appt-item h3{margin:.12rem 0;font-size:1.08rem}.edu-item p,.appt-item p{margin:.16rem 0}.when{font:600 .76rem var(--sans);color:var(--blue);letter-spacing:.05em;text-transform:uppercase}.edu-item:last-child,.appt-item:last-child{border-bottom:0}.edu-item .sub,.appt-item .sub{margin-top:.25rem}
+@media(max-width:820px){.homegrid{grid-template-columns:1fr;gap:1.3rem}.side{position:static}.photo{max-width:11rem}.pillars,.cards,.metrics{grid-template-columns:1fr}.metric{border-right:0;border-bottom:1px solid var(--line)}.metric:last-child{border-bottom:0}.topin{flex-wrap:wrap}nav{order:3;flex-basis:100%;justify-content:flex-start;overflow-x:auto}.news li{grid-template-columns:1fr;gap:.05rem}.pub{grid-template-columns:2.6rem 1fr}}
+@media print{.top{display:none}.js .panel{display:block!important}.side{position:static}}
+.timeline{position:relative;margin:1.1rem 0 .4rem .5rem;padding-left:1.55rem}.timeline::before{content:"";position:absolute;left:4px;top:.35rem;bottom:.45rem;width:2px;background:#bd9555}.timeline .edu{position:relative;margin:0;padding:0 0 1.3rem .2rem}.timeline .edu:last-child{padding-bottom:.15rem}.timeline .edu::before{content:"";position:absolute;left:-1.55rem;top:.31rem;width:10px;height:10px;border-radius:50%;background:#f7f6f2;border:2px solid #bd9555}.timeline .year{font:600 .78rem var(--sans);color:var(--blue);text-transform:uppercase;letter-spacing:.04em;margin-bottom:.05rem}
+/* Quarto integration */
+#quarto-content { max-width: 68rem; margin: 0 auto; }
+.navbar { background: rgba(247,246,242,.96); border-bottom:1px solid var(--line); font-family:var(--sans); }
+.navbar-brand { font-weight:600; letter-spacing:.08em; color:var(--ink); }
+.navbar-nav .nav-link { color:var(--muted); font-weight:500; }
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:hover { color:var(--blue); }
+.navbar .cv-link { border:1.5px solid var(--blue); border-radius:999px; padding:.3rem .75rem!important; }
+main.content { padding-top: 1.4rem; }
+.quarto-title-block { display:none; }
+section.panel { display:block!important; }
+
+/* Research-area publication buttons */
+.research-output-groups{margin-top:.85rem;padding-top:.7rem;border-top:1px solid var(--line)}
+.research-output-row{display:flex;align-items:flex-start;gap:.55rem;margin:.42rem 0}
+.research-output-label{min-width:4.3rem;padding-top:.22rem;font:600 .72rem var(--sans);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.research-output-links{display:flex;flex-wrap:wrap;gap:.32rem}
+.research-output-links a{display:inline-block;padding:.19rem .55rem;border:1px solid var(--blue);border-radius:999px;background:#fff;color:var(--blue);text-decoration:none;font:600 .74rem var(--sans);line-height:1.3;transition:background-color .16s ease,color .16s ease,transform .16s ease}
+.research-output-links a:hover{background:var(--blue);color:#fff;transform:translateY(-1px)}
+@media(max-width:520px){.research-output-row{display:block}.research-output-label{display:block;margin-bottom:.3rem}.research-output-links{display:flex}}
+
+/* Distinguish research-area and method chips */
+.side .chips:not(.method-chips) .chip:nth-child(1){background:#e5eef6;color:#244f73}
+.side .chips:not(.method-chips) .chip:nth-child(2){background:#f3eadb;color:#76572b}
+.side .chips:not(.method-chips) .chip:nth-child(3){background:#e8f1eb;color:#356347}
+.side .chips:not(.method-chips) .chip:nth-child(4){background:#eee8f4;color:#624c78}
+.method-chips .chip{background:#fff;border:1px solid var(--line);color:#445463;font-weight:500}
+.method-chips .chip:nth-child(1),.method-chips .chip:nth-child(2){border-color:#b8ccdc;background:#f3f7fa;color:#315a7d}
+.method-chips .chip:nth-child(3),.method-chips .chip:nth-child(5){border-color:#decba9;background:#fbf7ef;color:#76572b}
+.method-chips .chip:nth-child(4),.method-chips .chip:nth-child(6){border-color:#c8d7cd;background:#f3f8f5;color:#3f674e}
+
+/* Enriched CV-derived tabs */
+.detail-list,.talk-list,.award-list{max-width:54rem}.detail-item,.talk-item{padding:.9rem 0;border-bottom:1px solid var(--line)}.detail-item h3,.talk-item h3{margin:.12rem 0 .2rem;font-size:1.08rem}.detail-item p,.talk-item p{margin:.15rem 0}.grant-grid{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;max-width:58rem}.grant-card{background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:7px;padding:1rem 1.1rem}.grant-card:nth-child(even){border-top-color:var(--blue)}.grant-card h3{font-size:1.08rem;margin:.2rem 0}.grant-card p{font-size:.93rem}.grant-meta{display:flex;flex-wrap:wrap;gap:.38rem;margin-top:.6rem}.grant-meta span{padding:.15rem .55rem;border-radius:999px;background:var(--blue-soft);font:600 .78rem var(--sans);color:var(--blue)}.award-item{display:grid;grid-template-columns:4rem 1fr;gap:.8rem;padding:.8rem 0;border-bottom:1px solid var(--line)}.award-year{font:600 .8rem var(--sans);color:var(--blue);padding-top:.22rem}.award-item h3{font-size:1.08rem;margin:0}.award-item p{margin:.08rem 0;color:var(--muted)}@media(max-width:680px){.grant-grid{grid-template-columns:1fr}.award-item{grid-template-columns:3.5rem 1fr}}
+
+/* Active navigation + night mode */
+.navbar .nav-link.active,.compiled-nav a.active{color:var(--blue)!important;box-shadow:inset 0 -2px 0 var(--gold);font-weight:600}.theme-toggle{width:2.15rem;height:2.15rem;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--ink);font:600 1rem/1 var(--sans);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;margin-left:.2rem}.theme-toggle:hover{border-color:var(--blue);color:var(--blue)}.theme-toggle:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+html[data-theme="dark"]{--bg:#111820;--paper:#18232d;--ink:#eef3f7;--text:#d7e0e7;--muted:#a5b2be;--blue:#8db9dc;--blue-soft:#213647;--gold:#d6ae6b;--gold-soft:#433822;--line:#34434f;--tint:#202d37;color-scheme:dark}html[data-theme="dark"] body{background:var(--bg);color:var(--text)}html[data-theme="dark"] .navbar,html[data-theme="dark"] .compiled-nav{background:rgba(17,24,32,.97)}html[data-theme="dark"] .research-output-links a,html[data-theme="dark"] .method-chips .chip{background:var(--paper)}html[data-theme="dark"] .side .chips:not(.method-chips) .chip:nth-child(1){background:#233b50;color:#b8dbf4}html[data-theme="dark"] .side .chips:not(.method-chips) .chip:nth-child(2){background:#443922;color:#ecd29e}html[data-theme="dark"] .side .chips:not(.method-chips) .chip:nth-child(3){background:#233c2d;color:#b8dfc5}html[data-theme="dark"] .side .chips:not(.method-chips) .chip:nth-child(4){background:#382d45;color:#d9c5ec}html[data-theme="dark"] .method-chips .chip:nth-child(n){border-color:var(--line);background:#1c2a34;color:#cbd9e3}html[data-theme="dark"] .photo.nophoto span{color:var(--muted)}
+/* Research identity alignment */
+.pillar .research-output-label{min-width:6rem}.pillar .research-output-links a{font-size:.69rem;padding:.2rem .48rem}.pillar{align-self:start}.pillar .research-output-row{margin:.5rem 0}.pillar .research-output-groups{margin-top:1rem}
+@media(max-width:520px){.pillar .research-output-label{min-width:0}}
+/* Service page scanability */
+.service-sections{max-width:58rem}.service-block{padding:.8rem 0 1rem;border-bottom:1px solid var(--line)}.service-block h3{margin:.15rem 0 .55rem}.service-tags{display:flex;flex-wrap:wrap;gap:.38rem}.service-tags span{padding:.2rem .55rem;border:1px solid var(--line);border-radius:999px;background:var(--paper);font:500 .78rem var(--sans);color:var(--text)}.service-tags.compact span{background:var(--blue-soft);border-color:transparent;color:var(--blue)}.service-mini{display:flex;flex-wrap:wrap;gap:.4rem .7rem;align-items:center}.service-mini span{color:var(--muted)}.service-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;max-width:58rem}.service-card{border:1px solid var(--line);border-left:4px solid var(--gold);background:var(--paper);border-radius:7px;padding:.85rem 1rem}.service-card:nth-child(even){border-left-color:var(--blue)}.service-card h3{font-size:1rem;margin:.05rem 0 .3rem}.service-card p{margin:0;font-size:.92rem;color:var(--muted)}@media(max-width:680px){.service-grid{grid-template-columns:1fr}.service-tags span{font-size:.75rem}}
+/* Profile buttons */
+.profile-buttons{display:flex;flex-direction:column;gap:.38rem;margin:.24rem 0 .55rem}.profile-buttons a{display:flex;align-items:center;gap:.48rem;width:100%;padding:.3rem .55rem;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--ink);text-decoration:none;font:600 .79rem var(--sans);transition:border-color .15s ease,transform .15s ease,background-color .15s ease}.profile-buttons a:hover{border-color:var(--blue);background:var(--blue-soft);transform:translateY(-1px)}.profile-icon{width:1.3rem;height:1.3rem;flex:0 0 1.3rem;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font:700 .68rem var(--sans);color:#fff}.profile-icon.scholar{background:#4285f4}.profile-icon.linkedin{background:#0a66c2;font-size:.67rem}.profile-icon.illinois{background:#13294b;color:#ff5f05;border-radius:4px;font-family:Georgia,serif;font-size:.82rem}html[data-theme="dark"] .profile-buttons a{background:var(--paper);border-color:var(--line)}
+/* TT curation refinements */
+.talk-venues{display:flex;flex-direction:column;gap:.18rem;margin-top:.25rem;color:var(--muted);font-size:.93rem}.university-service-list,.grant-list{max-width:58rem}.university-service-item,.grant-item{padding:.72rem 0;border-bottom:1px solid var(--line)}.university-service-item h3,.grant-item h3{font-size:1.04rem;margin:.08rem 0 .2rem}.university-service-item p,.grant-item p{margin:.08rem 0}.grant-item p{font-size:.92rem}.muted{color:var(--muted)}
+/* Vertical research program + publication resource buttons */
+.pillars{grid-template-columns:1fr;max-width:58rem}.pillar{width:100%}.pub .links{gap:.38rem}.pub .links a{min-width:5.35rem;text-align:center}.pub .links a.btn-journal{border-color:#315a7d;color:#315a7d;background:#f3f7fa}.pub .links a.btn-conference{border-color:#8a6a35;color:#76572b;background:#fbf7ef}.pub .links a.btn-preprint{border-color:#52735e;color:#3f674e;background:#f3f8f5}.pub .links a.btn-software{border-color:#6b5a7a;color:#624c78;background:#f7f3fa}.pub .links a:hover{color:#fff;background:var(--blue);border-color:var(--blue)}html[data-theme="dark"] .pub .links a.btn-journal,html[data-theme="dark"] .pub .links a.btn-conference,html[data-theme="dark"] .pub .links a.btn-preprint,html[data-theme="dark"] .pub .links a.btn-software{background:var(--paper);color:var(--text);border-color:var(--line)}
+/* Teaching depth */
+.teaching-intro{max-width:58rem}.teaching-highlights{display:flex;flex-wrap:wrap;gap:.38rem;margin:.8rem 0}.teaching-highlights span{padding:.18rem .58rem;border-radius:999px;background:var(--blue-soft);color:var(--blue);font:600 .78rem var(--sans)}.role-note{font:500 .78rem var(--sans);color:var(--muted);margin-left:.4rem}.course-list{list-style:none;padding:0;margin:.45rem 0 1.2rem;max-width:60rem}.course-list li{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;padding:.68rem 0;border-bottom:1px solid var(--line)}.course-list li>div:first-child{min-width:0}.course-list b{display:block;color:var(--ink)}.course-list li div>span{display:block;color:var(--muted);font-size:.92rem;margin-top:.08rem}.course-actions{flex:0 0 auto}.course-actions a{display:inline-block;padding:.2rem .58rem;border:1px solid var(--blue);border-radius:999px;text-decoration:none;font:600 .76rem var(--sans);white-space:nowrap}.course-actions a.syllabus-placeholder{border-color:var(--line);color:var(--muted)}.compact-courses li{padding:.5rem 0}.teaching-leadership{max-width:56rem}.recognition-row{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;max-width:60rem}.recognition-row span{border-top:3px solid var(--gold);background:var(--paper);padding:.75rem;border-radius:5px}.recognition-row small{display:block;color:var(--muted);margin-top:.18rem}.mentoring-groups{max-width:58rem}.mentoring-groups>div{padding:.55rem 0;border-bottom:1px solid var(--line)}.mentoring-groups h3{font-size:1rem;margin:.05rem 0}.mentoring-groups p{margin:.12rem 0;color:var(--muted)}@media(max-width:680px){.course-list li{display:block}.course-actions{margin-top:.35rem}.recognition-row{grid-template-columns:1fr}.role-note{display:block;margin:.15rem 0}}
+
+.compiled-nav{position:sticky;top:0;z-index:30;background:rgba(247,246,242,.97);border-bottom:1px solid var(--line);font-family:var(--sans)}.compiled-nav .inner{max-width:68rem;margin:auto;padding:.56rem 1.25rem;display:flex;align-items:center;gap:1.15rem;overflow-x:auto}.compiled-nav .brand{margin-right:auto}.compiled-nav a{text-decoration:none;white-space:nowrap}.compiled-page{max-width:68rem;margin:auto;padding:0 1.25rem 2rem}@media(max-width:820px){.compiled-nav .inner{gap:.75rem}}
+  </style>
+ </head>
+ <body>
+  <div class="compiled-nav">
+   <div class="inner">
+    <a class="brand" href="index.html">
+     ABHISHEK UMRAWAL
+    </a>
+    <a class="" href="index.html">
+     About
+    </a>
+    <a class="" href="research.html">
+     Research
+    </a>
+    <a class="" href="publications.html">
+     Publications
+    </a>
+    <a aria-current="page" class="active" href="teaching.html">
+     Teaching
+    </a>
+    <a class="" href="service.html">
+     Service
+    </a>
+    <a class="" href="talks.html">
+     Talks
+    </a>
+    <a class="" href="grants.html">
+     Grants
+    </a>
+    <a class="" href="awards.html">
+     Awards
+    </a>
+    <button aria-label="Use dark mode" class="theme-toggle" id="theme-toggle" title="Use dark mode" type="button">
+     ☾
+    </button>
+    <a class="cvbtn" href="cv.pdf">
+     CV ↓
+    </a>
+   </div>
+  </div>
+  <div class="compiled-page">
+   <div class="pagehead">
+    <p class="eyebrow">
+     Teaching &amp; Mentoring
+    </p>
+    <h1>
+     Teaching &amp; Mentoring
+    </h1>
+    <p>
+     Rigorous foundations, computational implementation, and applications across engineering, computer science, finance, analytics, and data-driven decision-making.
+    </p>
+   </div>
+   <div class="teaching-intro">
+    <p class="lede">
+     My teaching spans artificial intelligence, machine learning, algorithms, optimization, probability and statistics, data science, financial engineering, economics, and computing. I emphasize conceptual rigor, active learning, and the translation of analytical methods into real-world decision-making.
+    </p>
+    <!--
+<div class="teaching-highlights"><span>Full-course design &amp; delivery</span><span>Large-enrollment instruction</span><span>Graduate financial engineering</span><span>Curriculum development</span><span>Teaching-team leadership</span><span>Student research mentoring</span></div>
+-->
+   </div>
+   <h2>
+    Teaching Experience
+   </h2>
+   <h3>
+    University of Illinois Urbana-Champaign
+    <span class="role-note">
+     Teaching Assistant Professor · 2023–Present
+    </span>
+   </h3>
+   <ul class="course-list">
+    <li>
+     <div>
+      <b>
+       IE 523 · Financial Computing
+      </b>
+      <span>
+       Algorithms, numerical methods, optimization, simulation, and software implementation for quantitative finance.
+      </span>
+     </div>
+     <span class="course-actions">
+      <a href="teaching/ie523.pdf">
+       Syllabus
+      </a>
+     </span>
+    </li>
+    <li>
+     <div>
+      <b>
+       IE 522 · Statistical Methods in Finance
+      </b>
+      <span>
+       Statistical inference, simulation, regression, time series, forecasting, and risk analysis for quantitative finance.
+      </span>
+     </div>
+     <span class="course-actions">
+      <a href="teaching/ie522.pdf">
+       Syllabus
+      </a>
+     </span>
+    </li>
+    <li>
+     <div>
+      <b>
+       CS/ECE 374 · Introduction to Algorithms and Models of Computation
+      </b>
+      <span>
+       Algorithm design and analysis, automata and formal languages, computability, reductions, and computational complexity.
+      </span>
+     </div>
+     <span class="course-actions">
+      <a href="teaching/csece374.pdf">
+       Syllabus
+      </a>
+     </span>
+    </li>
+    <li>
+     <div>
+      <b>
+       ECE 313 / MATH 362 · Probability with Engineering Applications
+      </b>
+      <span>
+       Probability foundations, random variables, distributions, expectation, conditioning, and engineering applications.
+      </span>
+     </div>
+     <span class="course-actions">
+      <a href="teaching/ece313-math362.pdf">
+       Syllabus
+      </a>
+     </span>
+    </li>
+    <li>
+     <div>
+      <b>
+       ECE 365 · Data Science and Engineering
+       <span class="course-note">
+        (Course Development)
+       </span>
+      </b>
+      <span>
+       Data-science methods, computational workflows, statistical learning, and engineering applications.
+      </span>
+     </div>
+     <span class="course-actions">
+      <a href="teaching/ece365.pdf">
+       Syllabus
+      </a>
+     </span>
+    </li>
+    <li>
+     <div>
+      <b>
+       ECE 220 · Computer Systems and Programming
+      </b>
+      <span>
+       Programming in C, data structures, memory, low-level systems concepts, and implementation fundamentals.
+      </span>
+     </div>
+     <span class="course-actions">
+      <a href="teaching/ece220.pdf">
+       Syllabus
+      </a>
+     </span>
+    </li>
+    <li>
+     <div>
+      <b>
+       ECE 120 · Introduction to Computing
+      </b>
+      <span>
+       Digital logic, machine organization, assembly-level computation, and foundational programming concepts.
+      </span>
+     </div>
+     <span class="course-actions">
+      <a href="teaching/ece120.pdf">
+       Syllabus
+      </a>
+     </span>
+    </li>
+   </ul>
+   <h3>
+    University of Maryland, Baltimore County
+    <span class="role-note">
+     Visiting Lecturer · 2022–2023
+    </span>
+   </h3>
+   <ul class="course-list compact-courses">
+    <li>
+     <div>
+      <b>
+       CMSC 451 · Automata Theory and Formal Languages
+      </b>
+      <span>
+       Finite automata, regular and context-free languages, grammars, computability, and formal models of computation.
+      </span>
+     </div>
+     <span class="course-actions">
+      <a href="teaching/cmsc451.pdf">
+       Syllabus
+      </a>
+     </span>
+    </li>
+    <li>
+     <div>
+      <b>
+       CMSC 471 · Introduction to Artificial Intelligence
+      </b>
+      <span>
+       Search, planning, reasoning, probabilistic inference, machine learning, and intelligent-agent foundations.
+      </span>
+     </div>
+     <span class="course-actions">
+      <a href="teaching/cmsc471.pdf">
+       Syllabus
+      </a>
+     </span>
+    </li>
+    <li>
+     <div>
+      <b>
+       CMSC 478 · Introduction to Machine Learning
+      </b>
+      <span>
+       Supervised and unsupervised learning, model evaluation, feature representation, and practical predictive modeling.
+      </span>
+     </div>
+     <span class="course-actions">
+      <a href="teaching/cmsc478.pdf">
+       Syllabus
+      </a>
+     </span>
+    </li>
+    <li>
+     <div>
+      <b>
+       CMSC 447 · Software Engineering I
+      </b>
+      <span>
+       Project-based software engineering covering requirements, design, implementation, testing, teamwork, and workflows.
+      </span>
+     </div>
+     <span class="course-actions">
+      <a href="teaching/cmsc447.pdf">
+       Syllabus
+      </a>
+     </span>
+    </li>
+   </ul>
+   <h3>
+    Earlier Teaching
+   </h3>
+   <h3>
+    Purdue University
+    <span class="role-note">
+     Graduate Instructor of Mathematics · 2020
+    </span>
+   </h3>
+   <ul class="course-list compact-courses">
+    <li>
+     <div>
+      <b>
+       MA 162 · Plane Analytic Geometry and Calculus II
+      </b>
+      <span>
+       Integration techniques, infinite series, polar coordinates, parametric curves, and applications of calculus.
+      </span>
+     </div>
+     <span class="course-actions">
+      <a href="teaching/ma162.pdf">
+       Syllabus
+      </a>
+     </span>
+    </li>
+   </ul>
+   <h3>
+    Purdue University
+    <span class="role-note">
+     Graduate Teaching Assistant · 2017–2020
+    </span>
+   </h3>
+   <ul class="course-list compact-courses">
+    <li>
+     <div>
+      <b>
+       IE 335 · Operations Research — Optimization
+      </b>
+      <span>
+       Linear programming, optimization modeling, solution methods, duality, and quantitative decision-making.
+      </span>
+     </div>
+     <span class="course-actions">
+      <a href="teaching/ie335.pdf">
+       Syllabus
+      </a>
+     </span>
+    </li>
+    <li>
+     <div>
+      <b>
+       IE 546 · Economic Decisions in Engineering
+      </b>
+      <span>
+       Engineering economic analysis, cash-flow modeling, investment evaluation, and decision-making under financial tradeoffs.
+      </span>
+     </div>
+     <span class="course-actions">
+      <a href="teaching/ie546.pdf">
+       Syllabus
+      </a>
+     </span>
+    </li>
+    <li>
+     <div>
+      <b>
+       IE 330 · Probability and Statistics in Engineering II (Course Development)
+      </b>
+      <span>
+       Statistical inference, regression, experimental analysis, and probabilistic methods for engineering applications.
+      </span>
+     </div>
+     <span class="course-actions">
+      <a href="teaching/ie330.pdf">
+       Syllabus
+      </a>
+     </span>
+    </li>
+    <li>
+     <div>
+      <b>
+       ENGR 131/132/133 · Transforming Ideas to Innovation I, II, and EPICS
+      </b>
+      <span>
+       Team-based engineering design, computational problem-solving, modeling, and project development.
+      </span>
+     </div>
+     <span class="course-actions">
+      <a href="teaching/engr131-132-133.pdf">
+       Syllabus
+      </a>
+     </span>
+    </li>
+    <!--<li>
+     <div>
+      <b>
+       NCN · Summer Undergraduate Research Experience
+      </b>
+      <span>
+       Network and computational nanotechnology research methods through mentored undergraduate summer research.
+      </span>
+     </div>
+     <span class="course-actions">
+      <a href="teaching/ncn-sure.pdf">
+       Syllabus
+      </a>
+     </span>
+    </li>-->
+   </ul>
+   <h3>
+    Johns Hopkins University, Center for Talented Youth
+    <span class="role-note">
+     Instructor of Mathematics and Economics · 2019
+    </span>
+   </h3>
+   <ul class="course-list compact-courses">
+    <li>
+     <div>
+      <b>
+       Game Theory and Economics
+      </b>
+      <span>
+       Strategic interaction, equilibrium, incentives, competition, cooperation, and economic decision-making.
+      </span>
+     </div>
+     <span class="course-actions">
+      <a href="teaching/gte.pdf">
+       Syllabus
+      </a>
+     </span>
+    </li>
+   </ul>
+   <h3>
+    University of Delhi
+    <span class="role-note">
+     Instructor of Statistics · 2013–2017
+    </span>
+   </h3>
+   <ul class="course-list compact-courses">
+    <li>
+     <div>
+      <b>
+       Econometrics and Time Series Analysis
+      </b>
+      <span>
+       Regression, econometric modeling, time-series methods, forecasting, and empirical analysis of economic data.
+      </span>
+     </div>
+     <span class="course-actions">
+      <a href="teaching/etsa.pdf">
+       Syllabus
+      </a>
+     </span>
+    </li>
+    <li>
+     <div>
+      <b>
+       Advanced Statistical Computing and Data Mining
+      </b>
+      <span>
+       Statistical computing, multivariate analysis, data mining, predictive modeling, and computational applications.
+      </span>
+     </div>
+     <span class="course-actions">
+      <a href="teaching/ascdm.pdf">
+       Syllabus
+      </a>
+     </span>
+    </li>
+    <li>
+     <div>
+      <b>
+       Probability Theory
+      </b>
+      <span>
+       Probability spaces, random variables, distributions, expectation, convergence, and foundational stochastic reasoning.
+      </span>
+     </div>
+     <span class="course-actions">
+      <a href="teaching/probability-theory.pdf">
+       Syllabus
+      </a>
+     </span>
+    </li>
+    <li>
+      <div>
+        <b>
+          Statistical Methods
+        </b>
+        <span>
+          Statistical inference, estimation, hypothesis testing, regression, analysis of variance, and applied statistical methods.
+        </span>
+      </div>
+      <span class="course-actions">
+        <a href="teaching/statistical.pdf">
+          Syllabus
+        </a>
+      </span>
+    </li>
+    <li>
+     <div>
+      <b>
+       Statistical Computing Laboratories · SPSS, R, MATLAB, and C
+      </b>
+      <span>
+       Statistical programming, data analysis, simulation, and computational implementation across software environments.
+      </span>
+     </div>
+     <span class="course-actions">
+      <a href="teaching/stat-computing-labs.pdf">
+       Syllabus
+      </a>
+     </span>
+    </li>
+   </ul>
+   <h3>
+     Bridge School of Management
+     <span class="role-note">
+       Visiting Instructor of Business Analytics · 2015–2017
+       <br />
+       Program delivered in collaboration with Northwestern University’s Kellogg School of Management
+     </span>
+   </h3>
+   <ul class="course-list compact-courses">
+    <li>
+     <div>
+      <b>
+       Modeling Methods
+      </b>
+      <span>
+       Predictive and statistical modeling using R for business analytics and data-driven decision-making.
+      </span>
+     </div>
+     <span class="course-actions">
+      <a href="teaching/modeling-methods.pdf">
+       Syllabus
+      </a>
+     </span>
+    </li>
+    <li>
+     <div>
+      <b>
+       Advanced Modeling Methods
+      </b>
+      <span>
+       Advanced predictive modeling, model evaluation, and analytical methods using R for business applications.
+      </span>
+     </div>
+     <span class="course-actions">
+      <a href="teaching/advanced-modeling-methods.pdf">
+       Syllabus
+      </a>
+     </span>
+    </li>
+    <li>
+     <div>
+      <b>
+       Analytics Communication and Management
+      </b>
+      <span>
+       Data visualization and analytics communication using Tableau for managerial decision-making and business storytelling.
+      </span>
+     </div>
+     <span class="course-actions">
+      <a href="teaching/acm.pdf">
+       Syllabus
+      </a>
+     </span>
+    </li>
+   </ul>
+   <h2>
+    Teaching Leadership &amp; Innovation
+   </h2>
+   <ul class="clean teaching-leadership">
+    <li>
+     Lead full-course design, delivery, assessment, and instructional infrastructure for undergraduate and graduate courses spanning algorithms, computing, probability, data science, and financial engineering.
+    </li>
+    <li>
+     Supervise and coordinate teams of graduate and undergraduate teaching assistants for large-enrollment courses.
+    </li>
+    <li>
+     Develop structured learning resources and guided problem-solving approaches designed for conceptual understanding and scalable instruction.
+    </li>
+    <li>
+     Lead educational-innovation projects involving generative AI, assessment design, reference-sheet development, and evidence-based computing education.
+    </li>
+    <li>
+     Integrate applied AI and data-driven decision-making into course content, connecting technical foundations to analytics, optimization, platforms, and financial systems.
+    </li>
+   </ul>
+   <h2>
+    Teaching &amp; Advising Recognition
+   </h2>
+   <div class="recognition-row">
+    <span>
+     <b>
+      Stanley H. Pierce Award
+     </b>
+     <small>
+      University of Illinois Urbana-Champaign · 2026
+     </small>
+    </span>
+    <span>
+     <b>
+      Engineering Council Outstanding Advisor Award
+     </b>
+     <small>
+      University of Illinois Urbana-Champaign · 2026
+     </small>
+    </span>
+    <span>
+     <b>
+      Faculty Excellence Award
+     </b>
+     <small>
+      Bridge School of Management · 2015
+     </small>
+    </span>
+   </div>
+   <h2>
+    Student Advising &amp; Mentorship
+   </h2>
+   <p>
+    I mentor Ph.D., undergraduate, and visiting students across computer science, electrical and computer engineering, statistics, mathematics, and data science. I also advise professional M.S. students in financial engineering. Mentees have progressed to graduate programs and technology roles including Google, Databricks, Stripe, MathWorks, Marvell, and Narmi.
+   </p>
+   <div class="mentoring-groups">
+    <div>
+     <h3>
+      Ph.D. research mentoring
+     </h3>
+     <p>
+      Eliot W. Robson · Akhil Bhimaraju · Yingbing Huang · Raj K. Velicheti · Xinbo Wu
+     </p>
+    </div>
+    <div>
+     <h3>
+      Undergraduate research &amp; academic mentoring
+     </h3>
+     <p>
+      Anh Phung · Chris Deng · Dhemath Reddy · KaiZhou Yan · Curt Stutsman · Yehya Tellawi · Ayush Jain · Terence Zheng · Huiting Zhou · Advaith Anand · Camille Woods · Tian Tu
+     </p>
+    </div>
+    <div>
+     <h3>
+      Professional M.S. advising
+     </h3>
+     <p>
+      Faculty advisor to
+      <i>
+       Eighteen67ers
+      </i>
+      and
+      <i>
+       IlliniTraders,
+      </i>
+      two M.S. Financial Engineering student teams competing in the Bloomberg Trading Challenge, 2026.
+     </p>
+    </div>
+    <div>
+     <h3>
+      Visiting students
+     </h3>
+     <p>
+      Jaime Soto (Wilbur Wright College)
+     </p>
+    </div>
+   </div>
+   <p>
+    <a class="material" href="teaching/Abhishek_Umrawal_Teaching_Experience.pdf">
+    Teaching Experience (PDF)
+    </a>
+    <a class="material" href="teaching/Abhishek_Umrawal_Teaching_Statement.pdf">
+     Teaching Statement (PDF)
+    </a>
+    <a class="material" href="teaching/Abhishek_Umrawal_Student_Success_Statement.pdf">
+     Student Success Statement (PDF)
+    </a>
+   </p>
+   <script>
+    (function(){
+  var storageKey='au-theme';
+  function getSaved(){ try{return localStorage.getItem(storageKey)}catch(e){return null} }
+  function save(v){ try{localStorage.setItem(storageKey,v)}catch(e){} }
+  function preferred(){ return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+  function setTheme(theme){
+    document.documentElement.setAttribute('data-theme',theme);
+    save(theme);
+    document.querySelectorAll('.theme-toggle').forEach(function(btn){
+      btn.textContent=theme==='dark'?'☀':'☾';
+      var label=theme==='dark'?'Use light mode':'Use dark mode';
+      btn.setAttribute('aria-label',label); btn.setAttribute('title',label);
+    });
+  }
+  var initial=getSaved()||preferred();
+  document.documentElement.setAttribute('data-theme',initial);
+  function init(){
+    var existing=document.querySelector('.theme-toggle');
+    if(!existing){
+      var nav=document.querySelector('.navbar .navbar-nav:last-of-type')||document.querySelector('.navbar .navbar-nav');
+      if(nav){
+        var wrap=document.createElement('li'); wrap.className='nav-item theme-nav-item';
+        var btn=document.createElement('button'); btn.className='theme-toggle'; btn.type='button';
+        wrap.appendChild(btn); nav.appendChild(wrap); existing=btn;
+      }
+    }
+    document.querySelectorAll('.theme-toggle').forEach(function(btn){
+      if(btn.dataset.bound!=='1'){
+        btn.dataset.bound='1';
+        btn.addEventListener('click',function(){ setTheme(document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark'); });
+      }
+    });
+    setTheme(document.documentElement.getAttribute('data-theme')||initial);
+    var file=(location.pathname.split('/').pop()||'index.html').replace(/\.html$/,'');
+    var active=document.querySelector('.navbar .nav-'+file);
+    if(active){document.querySelectorAll('.navbar .nav-link').forEach(function(a){a.classList.remove('active');a.removeAttribute('aria-current')});active.classList.add('active');active.setAttribute('aria-current','page');}
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
+   </script>
+   <footer>
+    <div class="f">
+     <span>
+      © 2026 Abhishek Umrawal
+     </span>
+     <span>
+      <a href="https://scholar.google.co.in/citations?user=ezM7mtQAAAAJ&amp;hl=en">
+       Google Scholar
+      </a>
+      ·
+      <a href="https://www.linkedin.com/in/abhishekumrawal/">
+       LinkedIn
+      </a>
+      ·
+      <a href="https://ece.illinois.edu/about/directory/faculty/aumrawal">
+       Official Page
+      </a>
+     </span>
+    </div>
+   </footer>
+  </div>
+ </body>
+</html>
+

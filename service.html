@@ -43,17 +43,88 @@ p{margin:.55rem 0}
 .service-recognition b{color:var(--ink);font-weight:600}
 .service-recognition .meta{color:var(--muted);font-size:.92rem}
 .material{display:inline-block;margin:.6rem .5rem .2rem 0;padding:.38rem .8rem;border:1px solid var(--blue);border-radius:999px;text-decoration:none;font:600 .86rem var(--sans)}
-footer{margin-top:3rem;padding:1.35rem 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
-footer .f{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
-.compiled-nav{position:sticky;top:0;z-index:30;background:rgba(247,246,242,.97);border-bottom:1px solid var(--line);font-family:var(--sans)}
-.compiled-nav .inner{max-width:68rem;margin:auto;padding:.56rem 1.25rem;display:flex;align-items:center;gap:1.15rem;overflow-x:auto}
-.compiled-nav .brand{margin-right:auto}
-.compiled-nav a{text-decoration:none;white-space:nowrap}
-.compiled-nav a.active{color:var(--blue)!important;box-shadow:inset 0 -2px 0 var(--gold);font-weight:600}
-.compiled-page{max-width:68rem;margin:auto;padding:0 1.25rem 2rem}
-.theme-toggle{width:2.15rem;height:2.15rem;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--ink);font:600 1rem/1 var(--sans);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;margin-left:.2rem}
-.theme-toggle:hover{border-color:var(--blue);color:var(--blue)}
-.theme-toggle:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+footer{
+  margin-top:3rem;
+  padding:1.35rem 0;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:.9rem
+}
+footer .f{
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+  flex-wrap:wrap
+}
+.footer-links{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:.18rem
+}
+.footer-links a{
+  display:inline-block;
+  padding:.12rem .42rem;
+  border-radius:999px;
+  color:var(--blue);
+  text-decoration:none;
+  transition:background-color .15s ease,color .15s ease
+}
+.footer-links a:hover{
+  background:var(--blue);
+  color:#fff
+}
+.footer-sep{
+  color:var(--muted)
+}
+.compiled-nav{
+  position:sticky;
+  top:0;
+  z-index:30;
+  background:rgba(247,246,242,.97);
+  border-bottom:1px solid var(--line);
+  font-family:var(--sans)
+}
+.compiled-nav .inner{
+  max-width:68rem;
+  margin:auto;
+  padding:.56rem 1.25rem;
+  display:flex;
+  align-items:center;
+  gap:1.15rem;
+  overflow-x:auto
+}
+.compiled-nav .brand{
+  margin-right:auto
+}
+.compiled-nav a{
+  text-decoration:none;
+  white-space:nowrap
+}
+.compiled-nav a.active{
+  color:var(--blue)!important;
+  box-shadow:inset 0 -2px 0 var(--gold);
+  font-weight:600
+}
+.compiled-page{
+  max-width:68rem;
+  margin:auto;
+  padding:0 1.25rem 2rem
+}
+.theme-toggle{
+  width:2.15rem;
+  height:2.15rem;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:var(--paper);
+  color:var(--ink);
+  font:600 1rem/1 var(--sans);
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-left:.2rem
+}
 html[data-theme="dark"]{--bg:#111820;--paper:#18232d;--ink:#eef3f7;--text:#d7e0e7;--muted:#a5b2be;--blue:#8db9dc;--blue-soft:#213647;--gold:#d6ae6b;--gold-soft:#433822;--line:#34434f;--tint:#202d37;color-scheme:dark}
 html[data-theme="dark"] body{background:var(--bg);color:var(--text)}
 html[data-theme="dark"] .compiled-nav{background:rgba(17,24,32,.97)}
@@ -250,19 +321,12 @@ html[data-theme="dark"] .compiled-nav{background:rgba(17,24,32,.97)}
     <footer>
       <div class="f">
         <span>© 2026 Abhishek Umrawal</span>
-
-        <span>
-          <a href="https://scholar.google.co.in/citations?user=ezM7mtQAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">
-            Google Scholar
-          </a>
-          ·
-          <a href="https://www.linkedin.com/in/abhishekumrawal/" target="_blank" rel="noopener noreferrer">
-            LinkedIn
-          </a>
-          ·
-          <a href="https://ece.illinois.edu/about/directory/faculty/aumrawal" target="_blank" rel="noopener noreferrer">
-            Official Page
-          </a>
+        <span class="footer-links">
+          <a href="https://scholar.google.co.in/citations?user=ezM7mtQAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <span class="footer-sep">·</span>
+          <a href="https://www.linkedin.com/in/abhishekumrawal/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <span class="footer-sep">·</span>
+          <a href="https://ece.illinois.edu/about/directory/faculty/aumrawal" target="_blank" rel="noopener noreferrer">Official Page</a>
         </span>
       </div>
     </footer>

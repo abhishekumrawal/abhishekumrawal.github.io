@@ -50,7 +50,88 @@ h3{margin:1.8rem 0 .45rem;color:var(--ink);font:600 1.28rem/1.3 var(--serif)}p{m
 .pubgroup{margin:1.9rem 0}.pubgroup>h2{font-size:1.55rem}.pub{display:grid;grid-template-columns:3.15rem 1fr;gap:.5rem;padding:.8rem 0;border-bottom:1px solid var(--line)}.pn{font:700 .9rem var(--sans);color:var(--blue)}.pt{font-weight:600;color:var(--ink)}.pv{font-style:italic}.sub{font-size:.93rem;color:var(--muted);margin-top:.25rem}.pub .links{margin-top:.35rem}
 ul.clean{padding-left:1.1rem}li{margin:.28rem 0}.row{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}.row>span:last-child{white-space:nowrap;color:var(--muted)}
 .material{display:inline-block;margin:.6rem .5rem .2rem 0;padding:.38rem .8rem;border:1px solid var(--blue);border-radius:999px;text-decoration:none;font:600 .86rem var(--sans)}
-footer{margin-top:3rem;padding:1.35rem 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}footer .f{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+footer{
+  margin-top:3rem;
+  padding:1.35rem 0;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:.9rem
+}
+footer .f{
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+  flex-wrap:wrap
+}
+.footer-links{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:.18rem
+}
+.footer-links a{
+  display:inline-block;
+  padding:.12rem .42rem;
+  border-radius:999px;
+  color:var(--blue);
+  text-decoration:none;
+  transition:background-color .15s ease,color .15s ease
+}
+.footer-links a:hover{
+  background:var(--blue);
+  color:#fff
+}
+.footer-sep{
+  color:var(--muted)
+}
+.compiled-nav{
+  position:sticky;
+  top:0;
+  z-index:30;
+  background:rgba(247,246,242,.97);
+  border-bottom:1px solid var(--line);
+  font-family:var(--sans)
+}
+.compiled-nav .inner{
+  max-width:68rem;
+  margin:auto;
+  padding:.56rem 1.25rem;
+  display:flex;
+  align-items:center;
+  gap:1.15rem;
+  overflow-x:auto
+}
+.compiled-nav .brand{
+  margin-right:auto
+}
+.compiled-nav a{
+  text-decoration:none;
+  white-space:nowrap
+}
+.compiled-nav a.active{
+  color:var(--blue)!important;
+  box-shadow:inset 0 -2px 0 var(--gold);
+  font-weight:600
+}
+.compiled-page{
+  max-width:68rem;
+  margin:auto;
+  padding:0 1.25rem 2rem
+}
+.theme-toggle{
+  width:2.15rem;
+  height:2.15rem;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:var(--paper);
+  color:var(--ink);
+  font:600 1rem/1 var(--sans);
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-left:.2rem
+}
 .edu-list,.appt-list{margin-top:.5rem}.edu-item,.appt-item{padding:.9rem 0;border-bottom:1px solid var(--line)}.edu-item h3,.appt-item h3{margin:.12rem 0;font-size:1.08rem}.edu-item p,.appt-item p{margin:.16rem 0}.when{font:600 .76rem var(--sans);color:var(--blue);letter-spacing:.05em;text-transform:uppercase}.edu-item:last-child,.appt-item:last-child{border-bottom:0}.edu-item .sub,.appt-item .sub{margin-top:.25rem}
 @media(max-width:820px){.homegrid{grid-template-columns:1fr;gap:1.3rem}.side{position:static}.photo{max-width:11rem}.pillars,.cards,.metrics{grid-template-columns:1fr}.metric{border-right:0;border-bottom:1px solid var(--line)}.metric:last-child{border-bottom:0}.topin{flex-wrap:wrap}nav{order:3;flex-basis:100%;justify-content:flex-start;overflow-x:auto}.news li{grid-template-columns:1fr;gap:.05rem}.pub{grid-template-columns:2.6rem 1fr}}
 @media print{.top{display:none}.js .panel{display:block!important}.side{position:static}}
@@ -773,24 +854,16 @@ html[data-theme="dark"]{--bg:#111820;--paper:#18232d;--ink:#eef3f7;--text:#d7e0e
 })();
    </script>
    <footer>
-    <div class="f">
-     <span>
-      © 2026 Abhishek Umrawal
-     </span>
-     <span>
-      <a href="https://scholar.google.co.in/citations?user=ezM7mtQAAAAJ&amp;hl=en">
-       Google Scholar
-      </a>
-      ·
-      <a href="https://www.linkedin.com/in/abhishekumrawal/">
-       LinkedIn
-      </a>
-      ·
-      <a href="https://ece.illinois.edu/about/directory/faculty/aumrawal">
-       Official Page
-      </a>
-     </span>
-    </div>
+     <div class="f">
+       <span>© 2026 Abhishek Umrawal</span>
+       <span class="footer-links">
+         <a href="https://scholar.google.co.in/citations?user=ezM7mtQAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+         <span class="footer-sep">·</span>
+         <a href="https://www.linkedin.com/in/abhishekumrawal/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+         <span class="footer-sep">·</span>
+         <a href="https://ece.illinois.edu/about/directory/faculty/aumrawal" target="_blank" rel="noopener noreferrer">Official Page</a>
+       </span>
+     </div>
    </footer>
   </div>
  </body>

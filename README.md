@@ -411,3 +411,18 @@ edit `site.js`.
 
 Avoid introducing a new site generator or build system unless the website is
 intentionally being redesigned around one.
+
+## Syllabus Buttons
+
+All course syllabus buttons on `teaching.html` are controlled by a single
+configuration variable near the bottom of the file:
+
+    const SHOW_SYLLABUS_BUTTONS = false;
+
+Set:
+
+- `false` to hide all syllabus buttons
+- `true` to display all syllabus buttons
+
+This allows syllabus links to remain in the HTML while the corresponding PDF
+collection is being completed.

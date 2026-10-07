@@ -359,7 +359,7 @@ html[data-theme="dark"]{--bg:#111820;--paper:#18232d;--ink:#eef3f7;--text:#d7e0e
    <h3>
     Purdue University
     <span class="role-note">
-     Graduate Instructor of Mathematics · 2020
+     Graduate Recitation Instructor of Mathematics · 2020
     </span>
    </h3>
    <ul class="course-list compact-courses">
@@ -796,3 +796,18 @@ html[data-theme="dark"]{--bg:#111820;--paper:#18232d;--ink:#eef3f7;--text:#d7e0e
  </body>
 </html>
 
+<script>
+  /*
+   * CENTRAL SYLLABUS SWITCH
+   *
+   * false = hide all Syllabus buttons
+   * true  = show all Syllabus buttons
+   */
+  const SHOW_SYLLABUS_BUTTONS = false;
+
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".course-actions").forEach(function (actions) {
+      actions.style.display = SHOW_SYLLABUS_BUTTONS ? "" : "none";
+    });
+  });
+</script>
